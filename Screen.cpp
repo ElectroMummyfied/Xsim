@@ -63,7 +63,7 @@ void Screen::testScreen() {
     bool b1 = true; ///x
     bool b2 = true; ///y
 
-    while(!SDL_QuitRequested()) {
+    while(event.window.event != SDL_WINDOWEVENT_CLOSE ) {
         SDL_SetRenderDrawColor(renderer,0,0,0,255);
 
         if(n1 < this->width && b1 == true)
@@ -86,6 +86,7 @@ void Screen::testScreen() {
 
         SDL_RenderDrawPoint(this->renderer,n1,n2);
         SDL_RenderPresent(this->renderer);
+        SDL_PollEvent(&event);
     }
 }
 Screen::~Screen() {
