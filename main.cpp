@@ -14,11 +14,9 @@ int main(int argc,char *argv[]){
     SDL_Init(SDL_INIT_VIDEO);
 
     Screen main_screen(WINDOW_WIDTH,WINDOW_HEIGHT);
-    main_screen.drawX(main_screen.Xcenter(),main_screen.Ycenter());
-    main_screen.render();
-
     main_screen.testScreen();
-
+    
+    SDL_Delay(1000);
     SDL_Quit();
 
     return 0;
