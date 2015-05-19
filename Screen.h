@@ -12,7 +12,7 @@ class Screen {
         int centerY;
     public:
         Screen(int,int);
-        ~Screen();+
+        ~Screen();
 };
 
 #endif // SCREEN_H_INCLUDED
